@@ -9,24 +9,26 @@ package leetcode.array;
 public class one_bit_and_two_bit {
 
     public boolean isOneBitCharacter(int[] bits){
-      if (bits.length==1){
-          return true;
-      }else {
-        if (bits[bits.length-2]== 1){
-            if (bits[bits.length-3]== 1){
 
-            }else{
+        for (int i = 0; i <bits.length; i++) {
 
+            if(i==(bits.length-1)){
+                return  true;
             }
-            return false;
-        }else {
-            return true;
-        }
-      }
+            if (bits[i]==1){
+                i++;
+            }
 
+
+        }
+
+        return false;
     }
 
     public static void main(String[] args) {
+        one_bit_and_two_bit aa=new one_bit_and_two_bit();
+        int []bb={1,0,0};
+        System.out.println(aa.isOneBitCharacter(bb));
 
     }
 }

@@ -67,7 +67,7 @@ public class degree_of_an_array {
 
     public static void main(String[] args) {
         degree_of_an_array object = new degree_of_an_array();
-        int[] nums = {1, 2, 2, 3, 1};
+        int[] nums = {1, 2, 3};
         System.out.println(object.findShortestSubArray(nums));
 
     }

@@ -17,9 +17,24 @@ public class None_decreasing_array {
             if (nums[i - 1] <= nums[i]) {
 
             } else {
-                if (i != 1 && i != nums.length - 1 && nums[i - 1] > nums[i + 1]) {
-                    return false;
+//                if (i != 1 && i != nums.length - 1 && ) {
+//                    return false;
+//                }
+
+                if (i != 1 && i != nums.length - 1) {
+
+
+                    if (nums[i - 1] > nums[i + 1]) {
+                        if (nums[i - 2] <= nums[i]){
+
+                        }else{
+                            return false;
+                        }
+
+                    }
+
                 }
+
                 if (count == 0) {
                     count++;
                 } else {
@@ -33,7 +48,7 @@ public class None_decreasing_array {
     }
 
     public static void main(String[] args) {
-        int[] nums = {-1,4,2,3};
+        int[] nums = {-1, 4, 2, 3};
         None_decreasing_array aa = new None_decreasing_array();
         System.out.println(aa.checkPossibility(nums));
 
